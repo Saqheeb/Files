@@ -1,0 +1,28 @@
+{
+    "employees": [
+      {
+        "id": 111,
+        "empName": "Saqheeb",
+        "empAddress": "Shimoga",
+        "empSalary": 55000
+      },
+      {
+        "id": 112,
+        "empName": "Vijesh",
+        "empAddress": "Bengaluru",
+        "empSalary": 50000
+      },
+      {
+        "id": 113,
+        "empName": "Shaghil",
+        "empAddress": "Sagar",
+        "empSalary": 45000
+      },
+      {
+        "id": 114,
+        "empName": "Sanchita",
+        "empAddress": "Gangavati",
+        "empSalary": 60000
+      }
+    ]
+  }

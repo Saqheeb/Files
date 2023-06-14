@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs</title>
+    <script src="./lib/jquery.min.js"></script>
+    <script>
+        function init(){
+            $("div").hide()
+            $("a").click(function(){
+                $("div").show(2000)
+            })
+
+            $("button").click(function(){
+
+                const obj ={}
+                obj.id = $("input:first").val()
+                obj.name = $("input:eq(1)").val()
+                obj.mail = $("input:eq(2)").val()
+                obj.salary = $("input:eq(3)").val()
+
+                let jsonData = JSON.stringify(obj)
+                $("p:last").html(jsonData)
+            })
+        }
+        
+        $(document).ready(init)
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="#">User Registration</a>
+    </nav>
+        <div>
+            <h2>Registration Form</h2>
+            <p><input type="number" placeholder="Enter the ID"></p>
+            <p><input type="text" placeholder="Enter the Name"></p>
+            <p><input type="email" placeholder="Enter the Email"></p>
+            <p><input type="number" placeholder="Enter the salary"></p>
+            <p>
+                <button>Display Info</button>
+            </p>
+        </div>
+
+
+        <div>
+            <p id="pTag"></p>
+        </div>
+</body>
+</html>

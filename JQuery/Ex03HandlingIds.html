@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID's</title>
+    <script src="./lib/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+    <script>
+        function init(){
+
+            $("div").slideUp(1250)
+            $("a").click(()=>{
+                $("div").slideDown(1250,function(){
+                    $("a").hide()
+                })
+            })
+            $("button").click(function(){
+                const book ={}
+                book.id=$("#txtId").val()
+                book.title=$("#txtTitle").val()
+                book.author=$("#txtAuthor").val()
+                book.price=$("#txtPrice").val()
+
+                alert(JSON.stringify(book))
+                $("div").slideUp(1250,()=>{
+                    $("a").show()
+                })
+            })
+        }
+        $(document).ready(init)
+    </script>
+</head>
+<body>
+    <h2 class="h2 m-4">Book Details</h2>
+    <nav>
+        <a href="#" class="btn btn-secondary">Add Book Deatils</a>
+    </nav>
+    <div class="col-md-6 m-4">
+        <p><input class="form-control" type="number" id="txtId"  placeholder="BookId" ></p>
+        <p><input class="form-control" type="text" id="txtTitle" placeholder="Book Title"></p>
+        <p><input class="form-control" type="text" id="txtAuthor" placeholder="Book Author"></p>
+        <p><input class="form-control" type="number" id="txtPrice" placeholder="Book Price"></p>
+        <p><button class="btn btn-danger">Save Changes</button></p>
+    </div>
+</body>
+</html>

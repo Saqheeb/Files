@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objectPractice</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./ExObjectPractice.js"></script>
+    <!-- <script src="./Ex06ClassObject.js"></script> -->
+    <script>
+        function onClick() {
+            // //get input details
+            // const id = parseInt(document.getElementById('txtId').value)
+            // const name = document.getElementById('txtName').value
+            // const address = document.getElementById('txtAddress').value
+            // //create object 
+            // const obj = new employee(id,name,address)
+            // //display the details
+            // const span = document.getElementById("displayObject")
+            // //Method1 using JSON Parsing
+            // span.innerText = JSON.stringify(obj)
+            // //Method2 using interpolation
+            // // span.innerText = `The Name of the employee is ${obj.empName} with ID ${obj.empId} lives in ${obj.empAddress}`
+
+            addProperties();
+        }
+        function onInit() {
+            let btn = document.getElementById("submitDetails")
+            btn.addEventListener("click",onClick)
+
+            // let btn = document
+        }
+        window.addEventListener("load",onInit)
+    </script>
+</head>
+<body>
+    <h1>Creating the Objects</h1>
+
+    <div class="container">
+        <div class="blockEmployee">
+            <h2>Enter Employee's Details</h2>
+            <div>
+                <input type="number" id="txtId" placeholder="Enter the EmployeeID"><br><br>
+                <input type="text" id="txtName" placeholder="Enter the Employee's Name"><br><br>
+                <input type="text" id="txtAddress" placeholder="Enter the Employee's Address"><br><br>
+                <button type="button" id="submitDetails">Register</button>
+            </div>
+            <div>
+                <span id="displayObject" style="color: black;"></span>
+            </div>
+        </div>
+    
+    
+    
+        <div class="blockCustomer">
+            <h2>Enter Customer's Details</h2>
+            <div>
+                <input type="number" id="cstID" placeholder="Enter the ID of Customer:"><br><br>
+                <input type="text" id="cstName" placeholder="Enter the Name of Customer"><br><br>
+                <input type="text" id="cstAddress" placeholder="Ente the address of Customer"><br><br>
+                <button type="button" id="submitCustoer">Submit</button>
+            </div>
+            <div>
+                <span id="displayObject" style="color: black;"></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+<!-- 
+onclick="employee(document.getElementById('employeeId').value,
+                              document.getElementById('employeeName').value,
+                              document.getElementById('employeeAddress').value)"  -->

@@ -1,0 +1,50 @@
+.blockEmployee{
+   border-style: solid;
+   display: inline-block;
+   position: relative;
+   margin: 40px;
+   padding: 20px;
+   left: 100px;
+   size: 40px;
+   font-size: 15px;
+   
+}
+
+input[type="text"]{
+    height: 25px;
+    width: 300px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+input[type="number"]{
+    height: 25px;
+    width: 300px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+.blockCustomer{
+    height: 25px;
+    width: 300px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+h2{
+    display: block;
+    text-align: center;
+}
+
+h1{
+    display: block;
+    text-align: center;
+}
+
+.container{
+    display: block;
+    position: absolute;
+}

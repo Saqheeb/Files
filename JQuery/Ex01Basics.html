@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics</title>
+    <script src="./lib/jquery.min.js"></script>
+    <script>
+        // $(document).ready(()=>{
+        //     alert("Testing JQuery")
+        // })
+
+        let change = ["border","10px solid #CDB4DB","background-color","#FFAFCC","box-shadow","#CDB4DB"]
+
+        $(document).ready(function(){
+            $("div").click(function(){
+                $(this).css(...change)
+                // $(this).css("box-shadow","#FFC8DD")
+            }).mousemove(function(){
+                $(this).css("font-size","40pt")
+            }).mouseleave(function(){
+                $(this).css("font-size","18pt")
+            })
+        })
+
+        // const func = function(){
+        //     $("div").click(function(){
+        //         $(this).hide(500)
+        //     })
+
+        //     $("a").click(function(){
+        //         $("div").show(500)
+        //     })
+        // }
+
+        // $(document).ready(func)
+    </script>
+    <style>
+        div{
+            background-color: #A2D2FF;
+            border: 2px solid #CDB4DB;
+            width: 250px;
+            height: 200px;
+            display: inline-block;
+            margin: auto;
+            /* justify-content: center; */
+            /* align-items: center; */
+            padding: 20px;
+            box-shadow: 5px 5px 5px #BDE0FE;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">Show All</a>
+    </nav>
+
+
+    <div>
+        <p>Hello</p>
+    </div>
+    <div>
+        <p>Mother</p>
+    </div>
+    <div>
+        <p>Father</p>
+    </div>
+</body>
+</html>

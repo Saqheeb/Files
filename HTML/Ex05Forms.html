@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./mainstyle.css">
+    <script>
+        function onClick(){
+            const val1 =parseFloat(document.getElementById("firstValue").value); 
+            const val2 =parseFloat(document.getElementById("secondValue").value); 
+            const operand = document.getElementById("slOperand").value;
+            let res = 0;
+
+            switch (operand) {
+                case "addition":
+                    res = val1+val2;
+                    break;
+                case "Subtract":
+                    res = val1-val2;
+                    break;
+                case "Multiply":
+                    res = val1*val2;
+                    break;
+                case "Division":
+                    res = val1/val2;
+                    break;
+                default:
+                    res=56464;
+                    break;
+            }
+            document.getElementById("spResult").innerText = res;
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome To HTML Training</h1>
+    <hr>
+    <div>
+        <nav>
+            <div>
+                <a href="./Ex06Links.html">Home</a>
+                <a href="./Ex01BasicHTML.html">Basic</a>
+                <a href="./Ex02Images.html">Tourism</a>
+                <a href="./Ex03Lists.html">Lists</a>
+                <a href="./Ex04Tables.html">Intern Inforamtio</a>
+                <a href="#">Calculator</a>
+            </div>
+        </nav>
+    </div>
+    <h1>Forms Application</h1>
+    <form >
+        <p>Enter the first number: <input type="number" id="firstValue" placeholder="First Number"/>
+        <select id="slOperand">
+            <option ></option>
+            <option value="addition">Add</option>
+            <option >Subtarct</option>
+            <option >Multiply</option>
+            <option >Division</option>
+        </select>
+        Enter the first number: <input type="number" id="secondValue" placeholder="second Number"/>
+
+        <button onCLick="onClick()" type="button">=</button>
+        <span id="spResult"></span>
+    </p>
+    </form>
+</body>
+</html>

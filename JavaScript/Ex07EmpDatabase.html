@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dbStyles.css">
+    <title>EmployeeDB</title>
+    <script src="./Ex07EmpDatabase.js"></script>
+    <script>        
+        // let db = new EmpRepo();
+
+        // function displayAll(){
+        //     alert("Display")
+        // }
+
+        // function onAddRecord(){
+        //     alert(" Record")
+        // }
+        
+        // function initialize(){
+        //     //add some records manually
+        //     db.addEmployee(new Employee(157,"Saqheeb","saqheeb@gmail.com",9556464646))
+        //     db.addEmployee(new Employee(761,"Sahil","sahil@gmail.com",9556464646))
+        //     db.addEmployee(new Employee(157,"Shaghil","shaghil@gmail.com",9556464646))
+        //     db.addEmployee(new Employee(157,"vijesh","vijesh@gmail.com",9556464646))
+
+        //     const allLink = document.getElementsByTagName("a")
+        //     const allRecLink = allLink[0]
+        //     allRecLink.addEventListener("click",displayAll)
+
+        //     const addRecLink = allLink[1]
+        //     addRecLink.addEventListener("click",onAddRecord)
+        // }
+
+        // window.addEventListener("load",initialize)
+    </script>
+
+</head>
+<body>
+    <h1>Employee Monitering System</h1>
+    <div class="navBar">
+        <nav>
+            <a id="recordsAnchor" href="#">All Records</a>
+            <a id="updateAnchor" href="#">Update Record</a>
+            <!-- <a href="./Ex07UpdateEmployee.html">Update Record</a> -->
+        </nav>
+    </div>
+
+    <!-- <div class="main">
+        <div class="empTable">
+            <h2>List of Employeess</h2>
+            <hr>
+            <table border="1" id="tblRecords"></table>            
+        </div>
+        <div class="empDetails">
+            <h2>Employee Details</h2>
+            <hr>
+            <p><input type="number" id="empId"></p>
+            <p><input type="text" id="empName"></p>
+            <p><input type="text" id="empMail"></p>
+            <p><input type="number" id="empPhone"></p>
+        </div>
+    </div> -->
+    <div class="mainClass">
+        <div class="empTable"><h2>Employee Details</h2>
+            <h1>List of Records</h1>
+            <hr>
+            <div class="table">
+                <table border="1" id="tblId"></table>
+            </div>
+        </div>    
+        <div class="empDetails"><h2>Employee Details</h2>
+            <h1>Enter Records</h1>
+            <hr>
+            <p><input type="number" id="empId" placeholder="Enter the Employee's ID"></p>
+            <p><input type="text" id="empName"placeholder="Enter the Employee's Name"></p>
+            <p><input type="text" id="empMail" placeholder="Enter the Employee's Email"></p>
+            <p><input type="number" id="empPhone" placeholder="Enter the Employee's Phone number"></p>
+            <p><button id="addBtn">Add</button><button id="updateBtn">Update</button></p>
+        </div>
+    
+</body>
+</html>
